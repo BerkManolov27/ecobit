@@ -1,7 +1,8 @@
 /* --- Global Styles --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
@@ -11,8 +12,7 @@ body, html {
 
 /* --- Fixed Navbar Support --- */
 .page-content {
-  /* Pushes the blocks down so they don't hide under your Bootstrap navbar */
-  padding-top: 56px; 
+  padding-top: 56px;
 }
 
 /* --- Block Layout Container --- */
@@ -36,21 +36,17 @@ body, html {
 }
 
 /* --- Individual Block Styles --- */
-
-/* Block 1 (Top) */
 .hero-block {
   background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  min-height: 70vh; /* Takes up 70% of the screen height */
+  min-height: 70vh;
 }
 
-/* Block 2 (Middle) */
 .feature-block {
   background-color: #ffffff;
 }
 
-/* Block 3 (Bottom) */
 .action-block {
-  background-color: #f1f8f2; /* Soft grey-green */
+  background-color: #f1f8f2;
   border-top: 2px dashed #c8e6c9;
 }
 
@@ -71,7 +67,7 @@ body, html {
 }
 
 h2 {
-  color: #2E7D32;
+  color: #2e7d32;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -97,7 +93,7 @@ p {
 }
 
 .eco-btn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 1rem 2.5rem;
@@ -110,15 +106,15 @@ p {
 }
 
 .eco-btn:hover {
-  background-color: #388E3C;
+  background-color: #388e3c;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(56, 142, 60, 0.4);
 }
 
 .eco-btn-outline {
   background-color: transparent;
-  color: #4CAF50;
-  border: 2px solid #4CAF50;
+  color: #4caf50;
+  border: 2px solid #4caf50;
   padding: 0.9rem 2.4rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -128,7 +124,7 @@ p {
 }
 
 .eco-btn-outline:hover {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -138,6 +134,146 @@ p {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.minigame-page {
+  min-height: calc(100vh - 80px);
+  background:
+    radial-gradient(circle at top right, rgba(57, 168, 107, 0.12), transparent 45%),
+    linear-gradient(180deg, #f4fcf7, #f7f4ec);
+}
+
+.game-shell {
+  border-radius: 24px;
+  box-shadow: 0 12px 26px rgba(18, 54, 38, 0.14);
+}
+
+.score-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: #f1f9f5;
+  border: 1px solid #d3eadf;
+  font-weight: 700;
+}
+
+.game-rank {
+  font-weight: 700;
+  color: #2f4f40;
+}
+
+.item-card {
+  background: #f7fdf9;
+  border: 1px solid #d8eee2;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.game-item-display {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.item-icon {
+  font-size: 2rem;
+}
+
+.bin-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 2px solid;
+  border-radius: 14px;
+  background: #fff;
+  min-height: 56px;
+  font-weight: 700;
+}
+
+.bin-btn:hover:not(:disabled) {
+  background: #f8fdfb;
+}
+
+.bin-btn:disabled {
+  opacity: 0.65;
+}
+
+.game-feedback {
+  font-weight: 700;
+  color: #214838;
+}
+
+.interactive-card {
+  border-radius: 16px;
+}
+
+.habit-progress-wrap {
+  width: min(460px, 100%);
+  height: 10px;
+  border-radius: 999px;
+  background: #dcefdc;
+  margin: 0.75rem auto 0.35rem;
+  overflow: hidden;
+}
+
+.habit-progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #6bcf7f, #2b9f4f);
+  transition: width 0.25s ease;
+}
+
+.habit-btn {
+  width: 100%;
+  border: 2px solid #9bcba3;
+  background: #fff;
+  border-radius: 12px;
+  min-height: 58px;
+  font-weight: 600;
+  padding: 0.65rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.habit-btn:hover {
+  transform: translateY(-1px);
+  background: #f8fff8;
+}
+
+.habit-btn.done {
+  border-color: #4caf50;
+  background: #ecf8ee;
+}
+
+.eco-primary-btn {
+  background: #2e8b57;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.eco-primary-btn:hover {
+  background: #237247;
+}
+
+@media (max-width: 768px) {
+  .habit-btn {
+    min-height: 52px;
+  }
+
+  .score-pill {
+    font-size: 0.9rem;
+  }
 }
